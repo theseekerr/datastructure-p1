@@ -1,0 +1,18 @@
+def binary_search(list,target):
+ first=0
+ last=len(list)-1
+ while first<=target:
+   midpoint=(first+last)//2
+   if list[midpoint]==target:
+     return target:
+    elif list[midpoint]>target:
+      first=midpoint+1
+    else:
+      last=midpoint-1
+return None
+
+def verfiy(index):
+  if index is not None:
+    print("target is found at :",index)
+   else:
+     print("target is not found")
