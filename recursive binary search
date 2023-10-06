@@ -1,0 +1,22 @@
+def recursive_binarysearch(list,target):
+    if len(list)==0:
+        return False
+    else:
+        midpoint=len(list)//2
+    if list[midpoint]==target:
+        return True
+    elif list[midpoint]<target:
+        return recursive_binarysearch(list[midpoint+1:],target)
+    else:
+        return recursive_binarysearch(list[:midpoint],target)
+def verify(result):
+    print("target found is :",result)
+number=[1,2,3,4,5,6,7,8,9,10]
+index=recursive_binarysearch(number,18)
+verify(index)
+
+number=[1,2,3,4,5,6,7,8,9,10]
+index=recursive_binarysearch(number,6)
+verify(index)
+
+  
