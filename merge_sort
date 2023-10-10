@@ -1,0 +1,33 @@
+def merge_sort(list):
+    if len(list)<=1:
+        return list
+    right_half,left_half=split(list)
+    right=merge_sort(right_half)
+    left=merge_sort(left_half)
+    return merge(right,left)
+def split(list):
+    mid=len(list)//2
+    right=list[mid:]
+    left=list[:mid]
+    return right,left
+def merge(right,left):
+    l=[]
+    i=0
+    j=0
+    while i<len(left) and j<len(right):
+        if left[i] < right[j]:
+            l.append(left[i])
+            i+=1
+        else:
+            l.append(right[j])
+            j+=1
+    while i<len(left):
+        l.append(left[i])
+        i+=1
+    while j<len(right):
+        l.append(right[j])
+        j+=1
+    return l
+alist=[98,23,65,67,78,87,56,43,29]
+l=merge_sort(alist)
+print(l)
