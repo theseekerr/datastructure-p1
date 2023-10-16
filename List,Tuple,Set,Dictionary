@@ -1,0 +1,59 @@
+'''LIST
+ operations and methods
+------------------------------------------------------'''
+print("LIST:------------------")
+l1=[1,2,3,4,5,6,"string",True,98] #creating list
+print("entered list is:",l1)
+l1[0]=75 #replacing a index
+print("list after replacing an 0th index:",l1)
+l1.append("music") #appending an element
+print("list after appending:",l1)
+l1[5]=([56,78,"list"]) #adding sublist 
+print("list after adding sublist on 5th index:",l1)
+del l1[0] #deleting a 0th index element
+print("list after deleting a 0th index:",l1)
+print("list after extracting 5th index:",l1[5]) #extracting a 6th index element
+print("another method of extracting:",l1[2:6]) #extracting a elemnt from 2th index to 6th index
+'''------------------------------------------------------------------------------------------------
+TUPLE
+opertions and methods
+tuple is immutable so we can't change,modify,insert
+----------------------------------------------------------------------------------------------------'''
+print("TUPLE:------------------------------------------------")
+tup=(1,2,3,"music",True,89,"basketball",98,67) #creating a tuple
+print("entered tuple:",tup)
+print("extracted element from 0th index:",tup[0]) #extracting an element
+print("extracted element from 2nd index to 6th index:",tup[2:6]) #extracting more than one element
+tup1=(1,2,3,4) #creating second tup for delete operation
+print("second tuple :",tup1)
+del tup1 #deleted tup1
+'''--------------------------------------------------------------------------------------------------
+DICTIONARY
+operations and methods
+in dict we use curly braces
+------------------------------------------------------------------------------------------------------'''
+print("DICTIONARY:------------------------------------------------------------")
+dict={"key":"value","mango":"fruit",49:"weight","height":171} #creating a dictionary
+print("ENTERED DICT:",dict)
+print(dict.keys()) #extraccting keys
+print(dict.values()) #extracting value
+dict["height"]=181 #replacing key's value
+print("UPDATED DICT:",dict)
+dict["hello"]="everyone" #adding new key value pair to dict
+print("DICT AFTER ADDED ONE KEY VALIE PAIR:",dict)
+del dict["height"] #deleting a dictionary
+print("DICT AFTER DELETION:",dict)
+'''-----------------------------------------------------------------------------------------------------------
+SET
+Operation and methods
+in set we use curly braces
+----------------------------------------------------------------------------------------------------------------'''
+print("SET:---------------------------------------------------------------------")
+s={1,2,3,"string",True,98,78,"Ball",78,98,1,2,3} #creating an set
+print(s)
+s.add(59) #adding element in a set
+print(s)
+s.remove("Ball") #removing an element in set
+print(s)
+
+
